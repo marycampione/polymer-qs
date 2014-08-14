@@ -1,0 +1,28 @@
+<link rel="import" href="packages/polymer/polymer.html">
+<link rel="import" href="othervalue.html">
+
+<polymer-element name="click-counter" attributes="count">
+  <template>
+    <style>
+      div {
+        font-size: 24pt;
+        text-align: center;
+        margin-top: 140px;
+      }
+      button {
+        font-size: 24pt;
+        margin-bottom: 20px;
+      }
+    </style>
+    
+    <other-value number="{{number}}"></other-value>
+    
+    <div>
+      <button on-click="{{increment}}">Click me</button><br>
+      <span>(click count: {{count}})</span>
+      <p> right then{{number}}</p>
+    </div>
+  </template>
+  <script type="application/dart" src="clickcounter.dart"></script>
+</polymer-element>
+
